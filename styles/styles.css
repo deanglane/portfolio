@@ -261,9 +261,10 @@ img {
   height: auto;
 }
 
-.header {
-  background-color: #081923;
+header {
+  border-bottom: 1px solid grey;
 }
+
 .header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +313,6 @@ img {
 }
 .header .headerContainer .profile {
   width: 50%;
-  outline: 2px solid #000;
 }
 .header .headerContainer .profile img {
   -o-object-fit: cover;
@@ -341,4 +341,22 @@ img {
 }
 .aboutMe .aboutMeContainer .aboutMeInfo {
   width: 65%;
+}
+
+.languageSection {
+  background-color: #102A3B;
+}
+.languageSection .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.languageSection .languages li {
+  width: 75px;
 }
