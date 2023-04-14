@@ -221,16 +221,17 @@ template {
   overflow: hidden;
 }
 
+/* ====Variables===== */
 html {
   font-family: xx; /* <-- add in font family here */
   font-size: 125%; /* <-- Changes the default font size to 20px */
   color: #fff;
-  background-color: #222;
+  background-color: #081923;
 }
 
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -258,4 +259,86 @@ img {
   max-width: 100%; /* Makes all images become responsive if the parent container wants to shrink */
   display: block; /* removes extra padding at bottom of images */
   height: auto;
+}
+
+.header {
+  background-color: #081923;
+}
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+}
+.header nav .logo {
+  margin-right: 300px;
+}
+.header nav .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.header .headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: calc(100vh - 100px);
+}
+.header .headerContainer .headerInfo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.header .headerContainer .profile {
+  width: 50%;
+  outline: 2px solid #000;
+}
+.header .headerContainer .profile img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.aboutMe {
+  background-color: #071218;
+}
+.aboutMe .aboutMeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.aboutMe .aboutMeContainer .aboutMeVideoIntro {
+  width: 35%;
+}
+.aboutMe .aboutMeContainer .aboutMeVideoIntro img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo {
+  width: 65%;
 }
