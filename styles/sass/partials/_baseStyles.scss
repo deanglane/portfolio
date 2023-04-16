@@ -12,16 +12,17 @@ html {
   width: 85%;
   margin: 0 auto;
 }
-  
+
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
-  
+
 html,
 ul,
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
   padding: 0;
@@ -37,4 +38,10 @@ img {
   max-width: 100%; /* Makes all images become responsive if the parent container wants to shrink */
   display: block; /* removes extra padding at bottom of images */
   height: auto;
+}
+
+.btn {
+  background: $blueAccent;
+  padding: 0.3em 1em;
+  border-radius: 5px;
 }
