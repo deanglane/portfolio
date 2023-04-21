@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SASS/CSS style sheet -->
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Icons -->
+  <script src='https://kit.fontawesome.com/33b85127f5.js' crossorigin='anonymous'></script>
   <title>Dean Lane - Portfolio</title>
 </head>
 <body>
-
   
   <header>
     <!-- wrapper start -->
@@ -16,34 +26,47 @@
 
       <!-- navigation in header-->
       <nav>
+
         <!-- logo -->
         <div class="logo">
           <img src="" alt="logo">
         </div>
+
+        <!-- navigation -->
         <ul class="navigation">
-          <li>home</li>
-          <li>about</li>
-          <li>skills</li>
-          <li>services</li>
-          <li>portfolio</li>
-          <li>services</li>
-          <li>testimonials</li>
-          <li>blog</li>
-          <li>get in touch</li>
-          <li><a class="btn" href="#contactMe">download CV</a></li>
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
+          <li>
+            <a href="#">skills</a>
+          </li>
+          <li>
+            <a href="#">projects</a>
+          </li>
+          <li>
+            <a href="#">blog</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+          <li>
+            <a class="btn" href="#contactMe">download CV</a>
+          </li>
         </ul>
       </nav>
 
       <div class="headerContainer">
         <div class="headerInfo">
-          <h1>i'm Dean Lane</h1>
-          <h2>front-end developer</h2>
-          <h3>production planner</h3>
-          <h3>collector of skills</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet perspiciatis adipisci enim expedita. Unde nobis quas ab necessitatibus laborum molestias.</p>
+          <p>G'day, my name is</p>
+          <h1>Dean Lane</h1>
+          <p>Front-end Developer</p>
+          <p>Photographer</p>
+          <p>Collector of Skills</p>
           <div class="resume">
-            <a class="btn resume" href="">resume</a>
-            <a href="">about me</a>
+            <a class="btn" href="#aboutMe">learn more</a>
           </div>
         </div>
   
@@ -59,7 +82,7 @@
   <main>
     
     <!-- about me section -->
-    <section class="aboutMe">
+    <section id="aboutMe" class="aboutMe">
       <!-- wrapper start -->
       <div class="wrapper">
         <div class="aboutMeContainer">
@@ -68,10 +91,11 @@
           </div>
           <div class="aboutMeInfo">
             <h2>about me</h2>
-            <h3>Why Hire Me for Your Next Project?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quam veritatis eius sequi quasi tenetur, numquam recusandae dolores odio hic quos nulla sapiente dicta obcaecati rem beatae vero iure ducimus at quia nemo? Voluptatem soluta distinctio exercitationem. Sapiente voluptatum, possimus fuga eligendi laboriosam accusamus, reiciendis ut autem rem corrupti fugiat pariatur qui dicta, ab sed tempore praesentium quas quibusdam perspiciatis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus fuga eos adipisci cupiditate! Temporibus suscipit earum pariatur autem iusto quo ipsum provident expedita voluptates, tempora a laudantium assumenda laborum quis.</p>
-            <a class="btn learnMore" href="">learn more</a>
+            <h3>Why hire me for your next project?</h3>
+            <p>I am a person who is eager to take on new and exciting challenges. I'm a front-end developer. I build webpages and applications for the internet that are engaging, responsive and most importantly accessible.</p>
+            <p>One of my favorite passions is learning and acquiring new skill sets that I can apply into my life and career.</p>
+            <p>Some of my other passions include cooking, photography, food styling and technology</p>
+            <a class="btn skills" href="">Skills</a>
           </div>
         </div>
       </div>
@@ -86,25 +110,25 @@
         <!-- todo -  get icons for different language skills -->
         <ul class="languages">
           <li>
-            <img src="./assets/svg/html5-original-wordmark.svg" alt="HTML5">
+            <img data-aos="zoom-in" src="./assets/svg/html5-original-wordmark.svg" alt="HTML5">
           </li>
           <li>
-            <img src="./assets/svg/css3-original-wordmark.svg" alt="CSS3">
+            <img data-aos="zoom-in" src="./assets/svg/css3-original-wordmark.svg" alt="CSS3">
           </li>
           <li>
-            <img src="./assets/svg/javascript-original.svg" alt="Javascript + ES6">
+            <img data-aos="zoom-in" src="./assets/svg/javascript-original.svg" alt="Javascript + ES6">
           </li>
           <li>
-            <img src="./assets/svg/react-original-wordmark.svg" alt="React">
+            <img data-aos="zoom-in" src="./assets/svg/react-original-wordmark.svg" alt="React">
           </li>
           <li>
-            <img src="./assets/svg/firebase-plain-wordmark.svg" alt="Fire Base">
+            <img data-aos="zoom-in" src="./assets/svg/firebase-plain-wordmark.svg" alt="Fire Base">
           </li>
           <li>
-            <img src="./assets/svg/git-original-wordmark.svg" alt="Git">
+            <img data-aos="zoom-in" src="./assets/svg/git-original-wordmark.svg" alt="Git">
           </li>
           <li>
-            <img src="./assets/svg/sass-original.svg" alt="Sass">
+            <img data-aos="zoom-in" src="./assets/svg/sass-original.svg" alt="Sass">
           </li>
         </ul>
 
@@ -204,13 +228,13 @@
       <div class="wrapper eduContainer">
         <ul>
           <li>
-            <img src="./assets/West_Coast_Institute_of_Training_Logo.svg.png" alt="West Coast College of TAFE">
+            <img data-aos="zoom-in-right" src="./assets/West_Coast_Institute_of_Training_Logo.svg.png" alt="West Coast College of TAFE">
           </li>
           <li>
-            <img src="./assets/juno.png" alt="Juno College">
+            <img data-aos="zoom-in" src="./assets/juno.png" alt="Juno College">
           </li>
           <li>
-            <img src="./assets/mater_dei_collgee.png" alt="Mater Dei College">
+            <img data-aos="zoom-in-left" src="./assets/mater_dei_collgee.png" alt="Mater Dei College">
           </li>
         </ul>
         
@@ -356,8 +380,7 @@
   <footer>
     <!-- todo - think about what needs to go into the footer section. Consider somethings like address, links to inportant sections, portfolio links, copyright, social media icons -->
   </footer>
-
-  <script src='https://kit.fontawesome.com/33b85127f5.js' crossorigin='anonymous'></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src='./js/app.js'></script> 
 </body>
 </html>

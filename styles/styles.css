@@ -223,9 +223,6 @@ template {
 
 /* ====Variables===== */
 html {
-  font-family: xx; /* <-- add in font family here */
-  font-size: 125%; /* <-- Changes the default font size to 20px */
-  color: #fff;
   background-color: #081923;
 }
 
@@ -236,24 +233,7 @@ html {
 }
 
 section {
-  padding: 50px 0;
-}
-
-html,
-ul,
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  padding: 150px 150px;
 }
 
 img {
@@ -263,16 +243,70 @@ img {
 }
 
 .btn {
-  background: #0e93ff;
+  background-color: none;
+  border: 1px solid #0e93ff;
+  border-radius: 10px;
+  color: #0e93ff;
   padding: 0.3em 1em;
   border-radius: 5px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.btn:hover, .btn:focus {
+  background-color: #102A3B;
 }
 
-header {
-  border-bottom: 1px solid grey;
+html {
+  font-size: 1.25rem;
 }
 
-.header nav {
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #cecdcd;
+}
+
+html,
+ul,
+h1,
+h2,
+h3,
+h4,
+p,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 70px;
+  font-size: 4rem;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation li {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 29px;
+  letter-spacing: 1.5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,18 +318,55 @@ header {
           align-items: center;
   height: 100px;
 }
-.header nav .logo {
-  margin-right: 300px;
-}
-.header nav .navigation {
+nav .navigation {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
+nav .navigation li a {
+  position: relative;
+  color: #cecdcd;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+nav .navigation li a:hover, nav .navigation li a:focus {
+  color: #0e93ff;
+}
+nav .navigation li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffa500;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+nav .navigation li a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header {
+  border-bottom: 1px solid grey;
+}
+
 .header .headerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,6 +378,7 @@ header {
 }
 .header .headerContainer .headerInfo {
   width: 50%;
+  padding-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,6 +389,13 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.header .headerContainer .headerInfo p:last-of-type {
+  padding-bottom: 20px;
+}
+.header .headerContainer .headerInfo h1 {
+  padding: 10px 0;
+  font-size: 3rem;
 }
 .header .headerContainer .profile {
   width: 50%;
@@ -342,16 +421,30 @@ header {
 }
 .aboutMe .aboutMeContainer .aboutMeVideoIntro img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
 }
 .aboutMe .aboutMeContainer .aboutMeInfo {
   width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding-left: 50px;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .skills {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .languageSection {
   background-color: #102A3B;
+  padding: 100px 100px;
 }
 .languageSection .languages {
   display: -webkit-box;

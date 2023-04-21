@@ -118,6 +118,10 @@ app.portfolioLoad = (value) => {
 app.init = () => {
   app.portfolioActive();
   app.portfolioSelect();
+  AOS.init({
+    duration: 1500,
+    once: true
+  });
 }
 
 app.init();
