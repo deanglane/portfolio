@@ -115,9 +115,31 @@ app.portfolioLoad = (value) => {
   })
 }
 
+// clearing users inputs after submit
+app.handleFormSubmit = () => {
+  app.name.value = "";
+  app.email.value = "";
+  app.subject.value = "";
+  app.comment.value = ""; 
+};
+
+app.contactForm = () => {
+  app.formBtn = document.getElementById('formBtn');
+  app.formClear = document.getElementById('formClear');
+  app.subject = document.getElementById('subject');
+  app.name = document.getElementById('name');
+  app.email = document.getElementById('email');
+  app.comment = document.getElementById('comment');
+
+  app.formBtn.addEventListener('click', app.handleFormSubmit);
+  app.formClear.addEventListener('click', app.handleFormSubmit);
+};
+
 app.init = () => {
+
   app.portfolioActive();
   app.portfolioSelect();
+  app.contactForm();
   AOS.init({
     duration: 1500,
     once: true
