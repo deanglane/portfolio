@@ -1,7 +1,7 @@
 // GENERAL STYLES
   
 html {
-  background-color: $backgroundBlue;
+  background-color: $blueSnow;
 }
   
 .wrapper {
@@ -20,17 +20,54 @@ img {
   height: auto;
 }
 
+// .btn {
+//   background-color: none;
+//   border: 1px solid $blueDark;
+//   border-radius: 10px;
+//   color: $blackGrey;
+//   padding: 0.3em 1em;
+//   border-radius: 5px;
+//   transition: 0.4s ease-in-out;
+  
+//   &:hover,
+//   &:focus {
+//     background-color: $redAccent;
+//     transform: scale(1.1);
+//   }
+// }
+
+
+/* CSS */
 .btn {
   background-color: none;
-  border: 1px solid $blueAccent;
-  border-radius: 10px;
-  color: $blueAccent;
-  padding: 0.3em 1em;
-  border-radius: 5px;
-  transition: 0.4s ease-in-out;
+  border: 2px solid $blackGrey;
+  border-radius: 30px;
+  box-shadow: $blackGrey 4px 4px 0 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  // -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  &:hover,
-  &:focus {
-    background-color: $backgroundGreen;
+.btn:hover {
+  background-color: $redAccent;
+}
+
+.btn:active {
+  box-shadow: $blackGrey 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 120px;
+    padding: 0 25px;
   }
 }

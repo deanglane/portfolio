@@ -47,7 +47,7 @@ header {
 
 // about me styling
 .aboutMe {
-  background-color: $backgroundDarkBlue;
+  background-color: $blueLight;
 
 
   .aboutMeContainer {
@@ -80,7 +80,7 @@ header {
 
 // Languages Styling
 .languageSection {
-  background-color: $backgroundGreen;
+  background-color: $blueMedium;
   padding: 100px 100px;
 
   .languages {
@@ -109,7 +109,7 @@ header {
       background-color: transparent;
       border: none;
       color: $offWhite;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
         color: $blueAccent;
@@ -118,8 +118,8 @@ header {
     }
 
     .btnNav-active {
-      color: $blueAccent;
-      border-bottom: 1px solid orange;
+      color: $redAccent;
+      border-bottom: 1px solid $redAccent;
       transform: scale(1.3);
     }
 
@@ -130,22 +130,21 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1%;
-
+    gap: 2%;
     padding-bottom: 50px;
     max-width: 1280px;
 
     .portfolioCard {
-      border: 1px solid $blueAccentOp;
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 1%;
-      background-color: $backgroundGreen;
+      background-color: $blueLight;
       width: 300px;
       display: flex;
       flex-direction: column;
       gap: 15px;
       cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
       .portfolioPreviewImg {
@@ -170,7 +169,7 @@ header {
 
 // education styles
 .education {
-  background-color: $backgroundGreen;
+  background-color: $blueMedium;
 
   ul {
     display: flex;
@@ -180,12 +179,15 @@ header {
     li {
       width: 250px;
       display: flex;
-
+      
       img {
         filter: brightness(0) invert(1) opacity(0.3);
+        
+        &:hover {
+          filter: brightness(0.9) invert(0) opacity(0.9);
+        }
       }
 
-      ;
     }
   }
 }
@@ -210,9 +212,7 @@ header {
     max-width: 900px;
 
     li {
-      // outline: 2px solid red;
       width: 300px;
-      height: 300px;
       padding: 50px 20px;
       text-align: center;
       display: flex;
@@ -222,18 +222,19 @@ header {
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
-        border-bottom: 1px solid $blueAccentOp;
+        border-bottom: 1px solid $blueDark;
       }
 
       &:nth-child(2),
       &:nth-child(5) {
-        border-left: 1px solid $blueAccentOp;
-        border-right: 1px solid $blueAccentOp;
+        border-left: 1px solid $blueDark;
+        border-right: 1px solid $blueDark;
       }
 
       &:nth-child(2) {
-        border: 2px solid $blueAccentOp;
-        background-color: $blueAccent;
+        border: 2px solid $blueDark;
+        background-color: $blueMedium;
+        color: #fff;
       }
 
       i {
@@ -241,12 +242,24 @@ header {
         font-weight: 600;
         padding-bottom: 20px;
       }
+
+      h2 {
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-style: italic;
+      }
+
     }
   }
 }
 
 
 // get in touch form section
+.contactMe {
+  background-color: $blueLight;
+}
 .contactMe h2 {
   text-align: center;  
 }
@@ -271,6 +284,7 @@ header {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    color: inherit;
 
     .topRow {
       display: flex;
@@ -286,9 +300,8 @@ header {
           border-radius: 8px;
           text-align: center;
           padding: 10px 0 10px 10px;
-          border-color: $blueAccent;
+          border-color: $redAccent;
           background-color: transparent;
-          color: $offWhite;
         }
       }
     }
@@ -297,9 +310,8 @@ header {
       width: 100%;
       padding: 10px 0 10px 10px;
       border-radius: 8px;
-      border-color: $blueAccent;
+      border-color: $redAccent;
       background-color: transparent;
-      color: $offWhite;
     }
 
     .bottomRow .bottom {
@@ -307,9 +319,8 @@ header {
       height: 200px;
       padding: 10px 0 10px 10px;
       border-radius: 8px;
-      border-color: $blueAccent;
+      border-color: $redAccent;
       background-color: transparent;
-      color: $offWhite;
     }
 
     .formButtons {
@@ -323,5 +334,38 @@ header {
       background-color: transparent;
       
     }
+  }
+}
+
+footer {
+  height: 50px;
+  // outline: 2px solid red;
+  background-color: $blueMedium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 65px;
+    left: 30px;
+
+    li {
+     width: 40px;
+
+     img {
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+     }
+   }
+  }
+  p {
+    
   }
 }

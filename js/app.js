@@ -22,41 +22,6 @@ app.portfolio = [
     icon: "fa-solid fa-laptop-code"
   },
   {
-    name: "web3",
-    url: "http",
-    desc: "something",
-    tag: "website",
-    icon: "fa-solid fa-laptop-code"
-  },
-  {
-    name: "web4",
-    url: "http",
-    desc: "something",
-    tag: "website",
-    icon: "fa-solid fa-laptop-code"
-  },
-  {
-    name: "web5",
-    url: "http",
-    desc: "something",
-    tag: "website",
-    icon: "fa-solid fa-laptop-code"
-  },
-  {
-    name: "web6",
-    url: "http",
-    desc: "something",
-    tag: "website",
-    icon: "fa-solid fa-laptop-code"
-  },
-  {
-    name: "web7",
-    url: "http",
-    desc: "something",
-    tag: "website",
-    icon: "fa-solid fa-laptop-code"
-  },
-  {
     name: "Pokemon Pokedex app",
     url: "https://dean-lane-pokemon-app.netlify.app/",
     desc: "A pokemon themed app demonstrating an Rest API call",
@@ -64,13 +29,20 @@ app.portfolio = [
     icon: "fa-brands fa-app-store"
   },
   {
-    name: "app2",
-    url: "http",
+    name: "in development",
+    url: "#",
     desc: "something",
-    tag: "app",
+    tag: "development",
     icon: "fa-brands fa-app-store"
   }
 ];
+
+app.portfolioDescriptions = {
+  'featured': "A collection of my favorite projects",
+  'web sites': "Websites built using HTML5, CSS3 and Sass. Additional functionality has been added to some using Javascript ES6. All sites are accessible and responsive",
+  'apps': "Applications built with React 3.0 utilizing components, states, hooks and routings. Some applications feature Rest API calls and/or Firebase realtime databases and authentication",
+  'development': "Coming soon! Websites adn apps that are currently in development. Check out my Github to keep up to date on latest commits"  
+}
 
 app.portfolioActive = () => {
   const websites = document.querySelector('.btnNav');
@@ -139,6 +111,7 @@ app.init = () => {
 
   app.portfolioActive();
   app.portfolioSelect();
+  app.portfolioLoad('feature');
   app.contactForm();
   AOS.init({
     duration: 1500,
