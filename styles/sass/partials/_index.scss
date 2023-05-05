@@ -1,0 +1,371 @@
+// index.html
+
+// header + nav styling
+header {
+  border-bottom: 1px solid grey;
+}
+
+.header {
+
+  .logo img {
+    width: 80px;
+
+  }
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 100px);
+
+    .headerInfo {
+      width: 50%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p:last-of-type {
+        padding-bottom: 20px;
+      }
+
+      h1 {
+        padding: 10px 0;
+        font-size: 3rem;
+      }
+
+    }
+
+    .profile {
+      width: 50%;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// about me styling
+.aboutMe {
+  background-color: $blueLight;
+
+
+  .aboutMeContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .aboutMeVideoIntro {
+      width: 35%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .aboutMeInfo {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 50px;
+
+      .skills {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+// Languages Styling
+.languageSection {
+  background-color: $blueMedium;
+  padding: 100px 100px;
+
+  .languages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      width: 75px;
+    }
+  }
+}
+
+// portfolio styles
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .portfolioCategories {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 50px;
+
+    .btnNav {
+      background-color: transparent;
+      border: none;
+      color: $offWhite;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $blueAccent;
+        transform: scale(1.3);
+      }
+    }
+
+    .btnNav-active {
+      color: $redAccent;
+      border-bottom: 1px solid $redAccent;
+      transform: scale(1.3);
+    }
+
+  }
+
+  .portfolioDisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    padding-bottom: 50px;
+    max-width: 1280px;
+
+    .portfolioCard {
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 1%;
+      background-color: $blueLight;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+      .portfolioPreviewImg {
+        display: flex;
+        justify-content: center;
+      }
+
+      .langIcn {
+        display: flex;
+        gap: 5px;
+
+        img {
+          width: 30px;
+          filter: grayscale(1);
+        }
+      }
+
+
+    }
+  }
+}
+
+// education styles
+.education {
+  background-color: $blueMedium;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    li {
+      width: 250px;
+      display: flex;
+      
+      img {
+        filter: brightness(0) invert(1) opacity(0.3);
+        
+        &:hover {
+          filter: brightness(0.9) invert(0) opacity(0.9);
+        }
+      }
+
+    }
+  }
+}
+
+
+//services styling
+.servicesContainer {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+
+  .servicesInfo {
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+
+    li {
+      width: 300px;
+      padding: 50px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-bottom: 1px solid $blueDark;
+      }
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        border-left: 1px solid $blueDark;
+        border-right: 1px solid $blueDark;
+      }
+
+      &:nth-child(2) {
+        border: 2px solid $blueDark;
+        background-color: $blueMedium;
+        color: #fff;
+      }
+
+      i {
+        font-size: 1.7rem;
+        font-weight: 600;
+        padding-bottom: 20px;
+      }
+
+      h2 {
+        padding-bottom: 20px;
+      }
+
+      p {
+        font-style: italic;
+      }
+
+    }
+  }
+}
+
+
+// get in touch form section
+.contactMe {
+  background-color: $blueLight;
+}
+.contactMe h2 {
+  text-align: center;  
+}
+
+.getInTouchContainer {
+  display: flex;
+
+  .leftImage {
+    width: 35%;
+    display: flex;
+
+    img {
+      height: 80%;
+      align-self: flex-end;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .formContainer {
+    width: 75%;
+    padding: 0 40px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    color: inherit;
+
+    .topRow {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+
+      .topLeft,
+      .topRight {
+        width: 50%;
+
+        .top {
+          width: 100%;
+          border-radius: 8px;
+          text-align: center;
+          padding: 10px 0 10px 10px;
+          border-color: $redAccent;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .middleRow .middle {
+      width: 100%;
+      padding: 10px 0 10px 10px;
+      border-radius: 8px;
+      border-color: $redAccent;
+      background-color: transparent;
+    }
+
+    .bottomRow .bottom {
+      width: 100%;
+      height: 200px;
+      padding: 10px 0 10px 10px;
+      border-radius: 8px;
+      border-color: $redAccent;
+      background-color: transparent;
+    }
+
+    .formButtons {
+      padding-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      
+    }
+    .formBtn {
+      background-color: transparent;
+      
+    }
+  }
+}
+
+footer {
+  height: 50px;
+  // outline: 2px solid red;
+  background-color: $blueMedium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 65px;
+    left: 30px;
+
+    li {
+     width: 40px;
+
+     img {
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+     }
+   }
+  }
+  p {
+    
+  }
+}

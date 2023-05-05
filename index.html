@@ -1,27 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SASS/CSS style sheet -->
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!--Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Icons -->
+  <script src='https://kit.fontawesome.com/33b85127f5.js' crossorigin='anonymous'></script>
   <title>Dean Lane - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico">
 </head>
+
 <body>
-  <nav></nav>
-  
+
   <header>
-    <h1>Dean Lane's portfolio</h1>
+    <!-- wrapper start -->
+    <div class="wrapper header">
+
+      <!-- navigation in header-->
+      <nav>
+
+        <!-- logo -->
+        <div class="logo">
+          <img src="./assets/logo2.png" alt="logo">
+        </div>
+
+        <!-- navigation -->
+        <ul class="navigation">
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#">about</a>
+          </li>
+          <li>
+            <a href="#">skills</a>
+          </li>
+          <li>
+            <a href="#">projects</a>
+          </li>
+          <li>
+            <a href="#">blog</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+          <li>
+            <a class="btn" href="#contactMe">download CV</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="headerContainer">
+        <div class="headerInfo">
+          <p>G'day, my name is</p>
+          <h1>Dean Lane</h1>
+          <p>Front-end Developer</p>
+          <p>Photographer</p>
+          <p>Collector of Skills</p>
+          <div class="resume">
+            <a class="btn" href="#aboutMe">learn more</a>
+          </div>
+        </div>
+
+        <!-- https://www.google.com/search?q=images%20of%20cartoon%20brains%20front%20left%20side%20right%20side&tbm=isch&tbs=rimg:CYQYvb8axf4PYYj-0ZYjZYN-sgIOCgIIABAAOgQIABAAQAHAAgA&client=firefox-b-d&hl=en&sa=X&ved=0CBoQuIIBahcKEwjwmOKCw8v-AhUAAAAAHQAAAAAQFw&biw=1497&bih=832 -->
+        <div class="profile">
+          <img src="./assets/left-brain-right-brain.jpeg" alt="">
+        </div>
+      </div>
+
+    </div>
+    <!-- wrapper end -->
   </header>
-  
+
   <main>
-  
-    <section>
-      
+
+    <!-- about me section -->
+    <section id="aboutMe" class="aboutMe">
+      <!-- wrapper start -->
+      <div class="wrapper">
+        <div class="aboutMeContainer">
+          <div class="aboutMeVideoIntro">
+            <img src="https://placekitten.com/440/440" alt="">
+          </div>
+          <div class="aboutMeInfo">
+            <h2>about me</h2>
+            <h3>Why hire me for your next project?</h3>
+            <p>I am a person who is eager to take on new and exciting challenges. I'm a front-end developer. I build
+              webpages and applications for the internet that are engaging, responsive and most importantly accessible.
+            </p>
+            <p>One of my favorite passions is learning and acquiring new skill sets that I can apply into my life and
+              career.</p>
+            <p>Some of my other passions include cooking, photography, food styling and technology</p>
+            <a class="btn skills" href="#languageSection">Skills</a>
+          </div>
+        </div>
+      </div>
+      <!-- wrapper end -->
     </section>
-  
+
+    <!-- languages section -->
+    <section id="languageSection" class="languageSection">
+      <!-- wrapper starts -->
+      <div class="wrapper">
+
+        <!-- todo -  get icons for different language skills -->
+        <ul class="languages">
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/html5-original-wordmark.svg" alt="HTML5">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/css3-original-wordmark.svg" alt="CSS3">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/javascript-original.svg" alt="Javascript + ES6">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/react-original-wordmark.svg" alt="React">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/firebase-plain-wordmark.svg" alt="Fire Base">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/git-original-wordmark.svg" alt="Git">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/svg/sass-original.svg" alt="Sass">
+          </li>
+        </ul>
+
+      </div>
+      <!-- wrapper ends -->
+    </section>
+
+    <!-- portfolio work section -->
+    <section class="portfolio">
+      <!-- wrapper start -->
+      <div class="wrapper portfolioContainer">
+        <h2>my portfolio</h2>
+        <h3>my work examples</h3>
+        <p>click the card to find out more and see a live preview!</p>
+        <p>A collection of my favorite projects</p>
+        <ul class="portfolioCategories">
+          <li>
+            <button class="btnNav" id="btnNav" value="feature">featured</button>
+          </li>
+          <li>
+            <button class="btnNav" id="btnNav" value="website">web sites</button>
+          </li>
+          <li>
+            <button class="btnNav" id="btnNav" value="app">apps</button>
+          </li>
+          <li>
+            <button class="btnNav" id="btnNav" value="development">development</button>
+          </li>
+        </ul>
+
+        <ul class="portfolioDisplay" id="portfolioDisplay"></ul>
+
+        <div class="gallery">
+          <!-- todo - insert link cards to each gallery -->
+        </div>
+      </div>
+      <!-- wrapper end -->
+    </section>
+
+
+
+    </div>
+    <!-- wrapper end -->
+    </section>
+
+    <!-- education section -->
+    <section class="education">
+      <!-- wrapper start -->
+      <div class="wrapper eduContainer">
+        <ul>
+          <li>
+            <img data-aos="zoom-in-right" src="./assets/West_Coast_Institute_of_Training_Logo.svg.png"
+              alt="West Coast College of TAFE">
+          </li>
+          <li>
+            <img data-aos="zoom-in" src="./assets/juno.png" alt="Juno College">
+          </li>
+          <li>
+            <img data-aos="zoom-in-left" src="./assets/mater_dei_collgee.png" alt="Mater Dei College">
+          </li>
+        </ul>
+
+      </div>
+      <!-- wrapper end -->
+    </section>
+
+    <!-- my services section -->
+    <section class="services">
+      <!-- todo - list all skills beside wed development such as photography, excel, project management, production planning and management -->
+      <!-- wrapper start -->
+      <div class="wrapper servicesContainer">
+        <div class="servicesInfo">
+          <h2>what I can do</h2>
+          <h3>services and solutions</h3>
+        </div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-network-wired"></i>
+            <h2>project management</h2>
+            <p>Overseeing and manage various projects from start to completion</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-computer"></i>
+            <h2>front-end development</h2>
+            <p>Build from the ground up web sites an apps using HTML5, CSS3, React and firebase</p>
+          </li>
+          <li>
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h2>production planning</h2>
+            <p>Forecast, plan and execute production orders for large scale manufacturing facilities</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-people-roof"></i>
+            <h2>leadership</h2>
+            <p>Mentor and manage large teams on various operations gather vital KPIs</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-camera-retro"></i>
+            <h2>photography</h2>
+            <p>Experience with working with clients, staging and shooting various products for online sales</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-database"></i>
+            <h2>data analysis</h2>
+            <p>Collect, organize and analyses different datasets using excel, google sheets and power Bi</p>
+          </li>
+        </ul>
+      </div>
+    </section>  
+
+    <!-- testimonials section -->
+    <!-- <section class="testimonials"> -->
+      <!-- wrapper start -->
+      <!-- <div class="wrapper"> -->
+
+        <!-- <h2>What my people say</h2>
+        <p>description about where these nice works come from.</p>
+        <div class="cards"> -->
+
+          <!-- card 1 -->
+          <!-- <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem natus ex tempora sequi, quaerat sit
+              minima doloribus maiores consequuntur quia. Aperiam delectus quis temporibus aut illo molestiae
+              adipisci minima corporis!</p>
+            <div class="contactsBottom">
+              <div class="contactProfile">
+                <img src="" alt="">
+                <p>Jack Johnson</p>
+                <p>Director of something</p>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- card 2 -->
+          <!-- <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem natus ex tempora sequi, quaerat sit
+              minima doloribus
+              maiores consequuntur quia. Aperiam delectus quis temporibus aut illo molestiae adipisci minima
+              corporis!</p>
+            <div class="contactsBottom">
+              <div class="contactProfile">
+                <img src="" alt="">
+                <p>Jack Johnson</p>
+                <p>Director of something</p>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- card 3 -->
+          <!-- <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem natus ex tempora sequi, quaerat sit
+              minima doloribus
+              maiores consequuntur quia. Aperiam delectus quis temporibus aut illo molestiae adipisci minima
+              corporis!</p>
+            <div class="contactsBottom">
+              <div class="contactProfile">
+                <img src="" alt="">
+                <p>Jack Johnson</p>
+                <p>Director of something</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      <!-- </div> -->
+      <!-- wrapper end -->
+    <!-- </section> -->
+
+    <!-- get in touch section -->
+    <section class="contactMe" id="contactMe">
+      <!-- wrapper start -->
+      <div class="wrapper">
+
+        <div class="getInTouchContainer">
+          <div class="leftImage">
+            <img src="./assets/email.jpg" alt="">
+          </div>
+          
+          <!-- contact form -->
+          <form class="formContainer" action="https://formspree.io/f/mzbqynek" method="post">
+            <h2>get in touch</h2>
+
+            <!-- top row -->
+            <div class="topRow">
+              <div class="topLeft">
+                <label class="sr-only" for="name">name</label>
+                <input class="top" type="text" name="name" placeholder="First Name" id="name" autocompleted="off" required>
+              </div>
+              <div class="topRight">
+                <label class="sr-only top" for="email">email address</label>
+                <input class="top" type="email" name="email" placeholder="Email Address" id="email" autocompleted="off"
+                  required>
+              </div>
+            </div>
+
+            <div class="middleRow">
+              <label class="sr-only" for="email">subject</label>
+              <input class="middle" type="text" name="subject" placeholder="Subject" id="subject" autocompleted="off" required>
+            </div>
+
+            <!-- bottom row -->
+            <div class="bottomRow">
+              <label class="sr-only" class="sr-only" for="comment">write your message</label>
+              <textarea class="bottom" name="textarea" id="comment" autocompleted="off" placeholder="Comments" required></textarea>
+
+              <!-- form buttons -->
+              <div class="formButtons">
+                <button class="btn formBtn" id="formBtn" type="submit">Send Message</button>
+                <button class="btn formBtn" id="formClear" type="button">Clear Form</button>
+              </div>
+
+            </div>
+          </form><!-- form end -->
+        </div>
+      </div>
+      <!-- wrapper end -->
+    </section>
+
   </main>
-  
-  <footer></footer>
+
+  <footer>
+    <!-- todo - think about what needs to go into the footer section. Consider somethings like address, links to inportant sections, portfolio links, copyright, social media icons -->
+
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/deanlaneto/" target="_blank" title="Linked In - deanlaneto">
+          <img src="./assets/svg/linkedin-original.svg" alt="Linked In">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/deanglane" target="_blank" title="Git hub - deanglane">
+          <img src="./assets/svg/github-original.svg" alt="GitHub">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/deanLaneTO" target="_blank" title="Twitter - @deanLaneTO">
+          <img src="./assets/svg/twitter-original.svg" alt="Twitter">
+        </a>
+      </li>
+      <li>
+        <a href="https://codepen.io/deanlane" target="_blank" title="Code Pen - deanlane">
+          <img src="./assets/svg/codepen-plain.svg" alt="CodePen">
+        </a>
+      </li>
+    </ul>
+    <!-- <section class="backToTop"></section> -->
+
+    <p>Copyright Dean Lane</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src='./js/app.js'></script>
 </body>
+
 </html>

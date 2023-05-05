@@ -1,0 +1,52 @@
+html {
+  font-size: clamp(1rem, 1.25rem, 3rem);
+  // font-size: 125%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: $blackGrey;
+}
+
+html,
+ul,
+h1,
+h2,
+h3,
+h4,
+p,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 70px;
+  font-size: 4rem;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation li {
+  text-transform: uppercase;
+}
+
+
+p {
+  line-height: 29px;
+  letter-spacing: 1.5px;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
