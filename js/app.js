@@ -5,35 +5,120 @@ app.portfolio = [
     name: "Bar One",
     url: "https://deanlane-proj01-bar-one.netlify.app/",
     desc: "Web site for a bar restaurant that features a responsive design, blog and a vanilla javascript meal ordering system  ",
+    images:{
+      img:"./assets/bar_one.png",
+      alt:"Restaurant bar website called Bar One "
+    },
     tag: ["website", "feature"],
     icon: "fa-solid fa-laptop-code",
     languages: [
-      "./assets/svG/html5-original-wordmark.svg",
+      "./assets/svg/html5-original-wordmark.svg",
       "./assets/svg/css3-original-wordmark.svg",
       "./assets/svg/sass-original.svg",
       "./assets/svg/javascript-original.svg"
     ]
   },
   {
-    name: "web2",
-    url: "http",
-    desc: "something",
+    name: "Hangry Tummy",
+    url: "https://deanlane-assign01-hungry-tummy.netlify.app",
+    desc: "A design showcasing responsiveness and accessibility",
+    images: {
+      img: "./assets/hangry_tummy.png",
+      alt: "Restaurant bar website called Bar One "
+    },
     tag: "website",
-    icon: "fa-solid fa-laptop-code"
+    icon: "fa-solid fa-laptop-code",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
   },
   {
     name: "Pokemon Pokedex app",
     url: "https://dean-lane-pokemon-app.netlify.app/",
     desc: "A pokemon themed app demonstrating an Rest API call",
+    images: {
+      img: "./assets/pokemon_pokedex_app.png",
+      alt: "Restaurant bar website called Bar One "
+    },
     tag: ["app", "feature"],
-    icon: "fa-brands fa-app-store"
+    icon: "fa-brands fa-app-store",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
   },
   {
-    name: "in development",
+    name: "Daily Horoscope API App",
+    url: "https://deanlane-dailyhoroscopeapp.netlify.app/",
+    desc: "A daily horoscope app to give the user their horoscope for either today, yesterday or tomorrow. This was built using Javascript, HTML5, CSS3 and SASS and makes an API call to retrieve the information.",
+    images: {
+      img: "./assets/daily_horoscope_app.png",
+      alt: "Daily horoscope app thumbnail"
+    },
+    tag: ["app"],
+    icon: "fa-brands fa-app-store",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
+  },
+  {
+    name: "Project 3 App",
+    url: "",
+    desc: "A placeholder for a future React app project",
+    images: {
+      img: "./assets/coming_soon.avif",
+      alt: "placeholder"
+    },
+    tag: ["app"],
+    icon: "fa-brands fa-app-store",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
+  },
+  {
+    name: "Project 4 App",
+    url: "",
+    desc: "A placeholder for a future React app project",
+    images: {
+      img: "./assets/coming_soon.avif",
+      alt: "Placeholder"
+    },
+    tag: ["app"],
+    icon: "fa-brands fa-app-store",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
+  },
+  {
+    name: "Escape Game",
     url: "#",
-    desc: "something",
+    desc: "A game built using HTML, CSS and Vanilla Javascript",
+    images: {
+      img: "./assets/coming_soon.avif",
+      alt: "A javascript based game app"
+    },
     tag: "development",
-    icon: "fa-brands fa-app-store"
+    icon: "fa-solid fa-screwdriver-wrench",
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg",
+      "./assets/svg/css3-original-wordmark.svg",
+      "./assets/svg/sass-original.svg",
+      "./assets/svg/javascript-original.svg"
+    ]
   }
 ];
 
@@ -72,20 +157,18 @@ app.portfolioLoad = (value) => {
     `<i class="${card.icon}"></i>
     <h4>${card.name}</h4>
     <div class="portfolioPreviewImg">
-      <img src="https://placekitten.com/250/250" alt="">
+      <img src="${card.images.img}" alt="${card.images.alt}">
     </div>
-    <div class="langIcn">
-      <img src="./assets/svg/html5-original-wordmark.svg" alt="">
-      <img src="./assets/svg/css3-original-wordmark.svg" alt="">
-      <img src="./assets/svg/sass-original.svg" alt="">
-      <img src="./assets/svg/javascript-original.svg" alt="">
-    </div>
+    <p>${card.desc}</p>
     <a href="${card.url}">Live Preview</a>`;
-
+    
     portfolioLi.classList.add('portfolioCard');
     portfolioUl.appendChild(portfolioLi);
+    
+    
   })
-}
+
+};
 
 // clearing users inputs after submit
 app.handleFormSubmit = () => {
