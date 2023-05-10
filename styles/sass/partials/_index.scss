@@ -143,13 +143,18 @@ header {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
       .portfolioPreviewImg {
         display: flex;
         justify-content: center;
+        width: 260px;
+        height: auto;
+
+        img {
+          object-fit: cover;
+        }
       }
 
       .langIcn {
