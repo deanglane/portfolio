@@ -470,6 +470,8 @@ header {
 .aboutMe .aboutMeContainer .aboutMeInfo .skills {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .languageSection {

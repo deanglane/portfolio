@@ -41,24 +41,21 @@
             <a href="#">home</a>
           </li>
           <li>
-            <a href="#">about</a>
+            <a href="#about">about</a>
           </li>
           <li>
-            <a href="#">skills</a>
+            <a href="#languageSection">skills</a>
           </li>
           <li>
-            <a href="#">projects</a>
+            <a href="#projects">projects</a>
           </li>
           <li>
-            <a href="#">blog</a>
-          </li>
-          <li>
-            <a href="#">contact</a>
+            <a href="#contactMe">contact</a>
           </li>
         </ul>
       </nav>
 
-      <div class="headerContainer">
+      <div id="about" class="headerContainer">
         <div class="headerInfo">
           <p>G'day, my name is</p>
           <h1>Dean Lane</h1>
@@ -99,8 +96,10 @@
             <p>One of my favorite passions is learning and acquiring new skill sets that I can apply into my life and
               career.</p>
             <p>Some of my other passions include cooking, photography, food styling and technology</p>
-            <a class="btn skills" href="#languageSection">Skills</a>
-            <a class="btn" href="#contactMe">download CV</a>
+            <div>
+              <a class="btn skills" href="#languageSection">Skills</a>
+              <a class="btn" href="#contactMe">Resume</a>
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +111,6 @@
       <!-- wrapper starts -->
       <div class="wrapper">
 
-        <!-- todo -  get icons for different language skills -->
         <ul class="languages">
           <li>
             <img data-aos="zoom-in" src="./assets/svg/html5-original-wordmark.svg" alt="HTML5">
@@ -142,7 +140,7 @@
     </section>
 
     <!-- portfolio work section -->
-    <section class="portfolio">
+    <section id="projects" class="portfolio">
       <!-- wrapper start -->
       <div class="wrapper portfolioContainer">
         <h2>my portfolio</h2>
@@ -216,7 +214,7 @@
           <li>
             <i class="fa-solid fa-computer"></i>
             <h2>front-end development</h2>
-            <p>Build from the ground up web sites an apps using HTML5, CSS3, React and firebase</p>
+            <p>Built from the ground up responsive and accessible web sites an apps using HTML5, CSS3, Javascript, React and firebase</p>
           </li>
           <li>
             <i class="fa-regular fa-pen-to-square"></i>
@@ -353,8 +351,6 @@
   </main>
 
   <footer>
-    <!-- todo - think about what needs to go into the footer section. Consider somethings like address, links to inportant sections, portfolio links, copyright, social media icons -->
-
     <ul>
       <li>
         <a href="https://www.linkedin.com/in/deanlaneto/" target="_blank" title="Linked In - deanlaneto">
@@ -377,9 +373,8 @@
         </a>
       </li>
     </ul>
-    <!-- <section class="backToTop"></section> -->
 
-    <p>Copyright Dean Lane</p>
+    <p>Copyright<span>&#169</span> Dean Lane 2023</p>
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

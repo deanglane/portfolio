@@ -58,7 +58,7 @@ app.portfolio = [
     desc: "A daily horoscope app to give the user their horoscope for either today, yesterday or tomorrow. This was built using Javascript, HTML5, CSS3 and SASS and makes an API call to retrieve the information.",
     images: {
       img: "./assets/daily_horoscope_app.png",
-      alt: " "
+      alt: "Daily horoscope app thumbnail"
     },
     tag: ["app"],
     icon: "fa-brands fa-app-store",
@@ -75,7 +75,7 @@ app.portfolio = [
     desc: "A placeholder for a future React app project",
     images: {
       img: "./assets/coming_soon.avif",
-      alt: "Restaurant bar website called Bar One "
+      alt: "placeholder"
     },
     tag: ["app"],
     icon: "fa-brands fa-app-store",
@@ -92,7 +92,7 @@ app.portfolio = [
     desc: "A placeholder for a future React app project",
     images: {
       img: "./assets/coming_soon.avif",
-      alt: "Restaurant bar website called Bar One "
+      alt: "Placeholder"
     },
     tag: ["app"],
     icon: "fa-brands fa-app-store",
@@ -106,13 +106,13 @@ app.portfolio = [
   {
     name: "Escape Game",
     url: "#",
-    desc: "An game built using HTML, CSS and Vanilla Javascript",
+    desc: "A game built using HTML, CSS and Vanilla Javascript",
     images: {
       img: "./assets/coming_soon.avif",
       alt: "A javascript based game app"
     },
     tag: "development",
-    icon: "fa-brands fa-app-store",
+    icon: "fa-solid fa-screwdriver-wrench",
     languages: [
       "./assets/svg/html5-original-wordmark.svg",
       "./assets/svg/css3-original-wordmark.svg",
