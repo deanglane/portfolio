@@ -510,7 +510,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  padding-bottom: 50px;
+  padding: 20px 0 50px;
 }
 .portfolioContainer .portfolioCategories .btnNav {
   background-color: transparent;
@@ -597,7 +597,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 70px;
+  gap: 150px;
 }
 .education ul li {
   width: 250px;
