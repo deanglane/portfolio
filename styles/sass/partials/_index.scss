@@ -52,7 +52,8 @@ header {
 
   .aboutMeContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
 
     .aboutMeVideoIntro {
       width: 35%;
@@ -105,7 +106,7 @@ header {
   .portfolioCategories {
     display: flex;
     gap: 50px;
-    padding-bottom: 50px;
+    padding: 20px 0 50px;
 
     .btnNav {
       background-color: transparent;
@@ -181,7 +182,7 @@ header {
   ul {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 150px;
 
     li {
       width: 250px;
