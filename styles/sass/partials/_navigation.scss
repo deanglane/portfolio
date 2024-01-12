@@ -5,25 +5,25 @@ nav {
   height: 100px;
 
   .navigation {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     align-items: baseline;
-  
+
     li {
-      
       a {
         position: relative;
         color: $blackGrey;
         text-decoration: none;
         transition: 0.5s ease-in-out;
-      
+
         &:hover,
         &:focus {
           color: $redAccent;
           outline: 2px solid $redAccent;
         }
-      
+
         &::before {
           content: "";
           position: absolute;
@@ -37,7 +37,7 @@ nav {
           transform-origin: top left;
           transition: transform 0.3s ease;
         }
-      
+
         &:hover::before {
           transform: scaleX(1);
         }
@@ -45,5 +45,3 @@ nav {
     }
   }
 }
-
-
