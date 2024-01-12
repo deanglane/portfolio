@@ -345,13 +345,14 @@ nav {
   height: 100px;
 }
 nav .navigation {
-  width: 60%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 1rem;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -546,11 +547,13 @@ header {
   max-width: 1280px;
 }
 .portfolioContainer .portfolioDisplay .portfolioCard {
-  border-radius: 10px;
+  background-color: #A8DADC;
+  width: 45%;
   padding: 20px;
   margin-bottom: 1%;
-  background-color: #A8DADC;
-  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -559,8 +562,12 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .portfolioContainer .portfolioDisplay .portfolioCard .portfolioPreviewImg {
   display: -webkit-box;
@@ -575,6 +582,15 @@ header {
 .portfolioContainer .portfolioDisplay .portfolioCard .portfolioPreviewImg img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.portfolioContainer .portfolioDisplay .portfolioCard .portfolioLinks {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .portfolioContainer .portfolioDisplay .portfolioCard .langIcn {
   display: -webkit-box;
@@ -780,6 +796,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 footer ul {
   display: -webkit-box;
@@ -804,4 +821,28 @@ footer ul li img {
 footer ul li img:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+}
+
+@media (max-width: 960px) {
+  nav {
+    gap: 4rem;
+  }
+  nav .logo {
+    min-width: 61.2px;
+  }
+  nav .navigation {
+    width: 80%;
+  }
+  .aboutMe .aboutMeContainer .aboutMeInfo {
+    padding: 0;
+    width: 100%;
+  }
+  .servicesContainer ul li:nth-child(1), .servicesContainer ul li:nth-child(2), .servicesContainer ul li:nth-child(3), .servicesContainer ul li:nth-child(4), .servicesContainer ul li:nth-child(5) {
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  nav .navigation {
+    width: 100%;
+  }
 }
