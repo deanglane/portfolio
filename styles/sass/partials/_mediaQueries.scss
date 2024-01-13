@@ -1,13 +1,27 @@
+@media (max-width: 1058px) {
+  .servicesContainer {
+    ul li {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 960px) {
   nav {
-    gap: 4rem;
-
     .logo {
       min-width: 61.2px;
     }
-
     .navigation {
-      width: 80%;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      font-size: 1rem;
     }
   }
 
@@ -20,26 +34,113 @@
     }
   }
 
-  .servicesContainer {
-    ul li {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5) {
-        border: none;
+  .languageSection {
+    padding: 100px 0;
+    .languages {
+      min-width: 210px;
+      justify-content: center;
+      gap: 30px;
+      li {
       }
     }
   }
 }
 
 @media (max-width: 768px) {
-  nav {
-    .navigation {
-      width: 100%;
+  .portfolioContainer {
+    .portfolioCategories {
+      gap: 10px;
+      li {
+        font-size: 0.8rem;
+      }
+    }
+    .portfolioDisplay {
+      flex-direction: column;
+      align-items: center;
+      column-gap: 40px;
+      row-gap: 20px;
+
+      .portfolioCard {
+        width: 100%;
+      }
+    }
+  }
+
+  .servicesContainer {
+    ul li {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border: none;
+      }
+    }
+  }
+
+  .getInTouchContainer {
+    .formContainer {
+      padding: 0;
+      .topRow {
+        flex-direction: column;
+        .topLeft,
+        .topRight {
+          width: 100%;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 570px) {
+  // Top navigation
+  nav {
+    gap: 10%;
+
+    .navigation {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  // Header Section
+  .headerContainer {
+    justify-content: center;
+  }
+
+  // education icons
+  .education {
+    ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  // service cards
+  .servicesContainer {
+    ul li {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        border: none;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  // form buttons
+  .getInTouchContainer {
+    .formContainer {
+      .formButtons {
+        flex-direction: column;
+      }
+    }
+  }
 }

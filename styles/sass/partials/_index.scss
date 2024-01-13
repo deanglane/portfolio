@@ -1,43 +1,24 @@
 // index.html
 
 // header + nav styling
-header {
-  border-bottom: 1px solid grey;
-}
 
 .header {
-  .logo img {
-    width: 80px;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .headerContainer {
-    display: flex;
-    justify-content: space-between;
     height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
 
-    .headerInfo {
-      width: 50%;
-      padding-left: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      p:last-of-type {
-        padding-bottom: 20px;
-      }
-
-      h1 {
-        padding: 10px 0;
-        font-size: 3rem;
-      }
+    p:last-of-type {
+      padding-bottom: 20px;
     }
 
-    .profile {
-      width: 50%;
-
-      img {
-        object-fit: cover;
-      }
+    h1 {
+      padding: 10px 0;
+      font-size: 3rem;
     }
   }
 }
@@ -86,9 +67,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     li {
-      width: 75px;
+      min-width: 75px;
     }
   }
 }
@@ -128,7 +110,8 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2%;
+    column-gap: 40px;
+    row-gap: 20px;
     padding-bottom: 50px;
     max-width: 1280px;
 
@@ -182,19 +165,12 @@ header {
   ul {
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 7%;
 
     li {
       width: 250px;
+      min-width: 250px;
       display: flex;
-
-      img {
-        filter: brightness(0) invert(1) opacity(0.3);
-
-        &:hover {
-          filter: brightness(0.9) invert(0) opacity(0.9);
-        }
-      }
     }
   }
 }
@@ -222,8 +198,8 @@ header {
       text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
+      // Top Row
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
@@ -270,18 +246,7 @@ header {
 
 .getInTouchContainer {
   display: flex;
-
-  .leftImage {
-    width: 35%;
-    display: flex;
-
-    img {
-      height: 80%;
-      align-self: flex-end;
-      mix-blend-mode: multiply;
-    }
-  }
-
+  justify-content: center;
   .formContainer {
     width: 75%;
     padding: 0 40px;
@@ -353,7 +318,8 @@ footer {
     gap: 10px;
     position: fixed;
     bottom: 65px;
-    left: 30px;
+    right: 30px;
+    // left: 30px;
 
     li {
       width: 40px;
