@@ -67,9 +67,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     li {
-      width: 75px;
+      min-width: 75px;
     }
   }
 }
@@ -164,19 +165,12 @@
   ul {
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 7%;
 
     li {
       width: 250px;
+      min-width: 250px;
       display: flex;
-
-      img {
-        filter: brightness(0) invert(1) opacity(0.3);
-
-        &:hover {
-          filter: brightness(0.9) invert(0) opacity(0.9);
-        }
-      }
     }
   }
 }
@@ -252,18 +246,7 @@
 
 .getInTouchContainer {
   display: flex;
-
-  .leftImage {
-    width: 35%;
-    display: flex;
-
-    img {
-      height: 80%;
-      align-self: flex-end;
-      mix-blend-mode: multiply;
-    }
-  }
-
+  justify-content: center;
   .formContainer {
     width: 75%;
     padding: 0 40px;

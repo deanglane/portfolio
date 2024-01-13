@@ -474,9 +474,11 @@ nav .navigation li a:hover::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .languageSection .languages li {
-  width: 75px;
+  min-width: 75px;
 }
 
 .portfolioContainer {
@@ -601,21 +603,14 @@ nav .navigation li a:hover::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 150px;
+  gap: 7%;
 }
 .education ul li {
   width: 250px;
+  min-width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.education ul li img {
-  -webkit-filter: brightness(0) invert(1) opacity(0.3);
-          filter: brightness(0) invert(1) opacity(0.3);
-}
-.education ul li img:hover {
-  -webkit-filter: brightness(0.9) invert(0) opacity(0.9);
-          filter: brightness(0.9) invert(0) opacity(0.9);
 }
 
 .servicesContainer {
@@ -693,18 +688,9 @@ nav .navigation li a:hover::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.getInTouchContainer .leftImage {
-  width: 35%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.getInTouchContainer .leftImage img {
-  height: 80%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  mix-blend-mode: multiply;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .getInTouchContainer .formContainer {
   width: 75%;
@@ -827,6 +813,16 @@ footer ul li img:hover {
     padding: 0;
     width: 100%;
   }
+  .languageSection {
+    padding: 100px 0;
+  }
+  .languageSection .languages {
+    min-width: 210px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
 }
 @media (max-width: 768px) {
   .portfolioContainer .portfolioCategories {
@@ -854,6 +850,19 @@ footer ul li img:hover {
   .servicesContainer ul li:nth-child(1), .servicesContainer ul li:nth-child(2), .servicesContainer ul li:nth-child(3), .servicesContainer ul li:nth-child(4), .servicesContainer ul li:nth-child(5), .servicesContainer ul li:nth-child(6) {
     border: none;
   }
+  .getInTouchContainer .formContainer {
+    padding: 0;
+  }
+  .getInTouchContainer .formContainer .topRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .getInTouchContainer .formContainer .topRow .topLeft,
+  .getInTouchContainer .formContainer .topRow .topRight {
+    width: 100%;
+  }
 }
 @media (max-width: 570px) {
   nav {
@@ -864,16 +873,35 @@ footer ul li img:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .headerContainer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .education ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
   .servicesContainer ul li:nth-child(1), .servicesContainer ul li:nth-child(2), .servicesContainer ul li:nth-child(3), .servicesContainer ul li:nth-child(4), .servicesContainer ul li:nth-child(5), .servicesContainer ul li:nth-child(6) {
     border: none;
   }
   .servicesContainer ul li h2 {
     font-size: 1.3rem;
+  }
+  .getInTouchContainer .formContainer .formButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }

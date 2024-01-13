@@ -33,6 +33,17 @@
       }
     }
   }
+
+  .languageSection {
+    padding: 100px 0;
+    .languages {
+      min-width: 210px;
+      justify-content: center;
+      gap: 30px;
+      li {
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -67,23 +78,46 @@
       }
     }
   }
+
+  .getInTouchContainer {
+    .formContainer {
+      padding: 0;
+      .topRow {
+        flex-direction: column;
+        .topLeft,
+        .topRight {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 570px) {
+  // Top navigation
   nav {
     gap: 10%;
-    .logo {
-      // display: none;
-    }
 
     .navigation {
       flex-direction: column;
+      align-items: flex-end;
     }
   }
+  // Header Section
   .headerContainer {
     justify-content: center;
   }
 
+  // education icons
+  .education {
+    ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  // service cards
   .servicesContainer {
     ul li {
       &:nth-child(1),
@@ -97,6 +131,15 @@
 
       h2 {
         font-size: 1.3rem;
+      }
+    }
+  }
+
+  // form buttons
+  .getInTouchContainer {
+    .formContainer {
+      .formButtons {
+        flex-direction: column;
       }
     }
   }
