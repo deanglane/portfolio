@@ -1,14 +1,19 @@
 nav {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+
+  .logo img {
+    width: 80px;
+  }
 
   .navigation {
-    width: 50%;
+    width: 80%;
+
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 10%;
     align-items: baseline;
 
     li {
@@ -16,14 +21,14 @@ nav {
         position: relative;
         color: $blackGrey;
         text-decoration: none;
-        transition: 0.5s ease-in-out;
+        transition: 0.3s ease-in-out;
 
         &:hover,
         &:focus {
           color: $redAccent;
-          outline: 2px solid $redAccent;
         }
 
+        // nav links underline
         &::before {
           content: "";
           position: absolute;
