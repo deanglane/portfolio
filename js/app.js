@@ -109,6 +109,21 @@ app.portfolio = [
       "./assets/svg/javascript-original.svg",
     ],
   },
+  {
+    name: "Test Game",
+    url: "#", // Todo link to game in browser
+    repo: "#", // Todo link to github repo
+    desc: "A description of the game",
+    images: {
+      img: "./assets/battle_rockets_new.png",
+      alt: "A Godot based game app",
+    },
+    tag: ["app", "game"],
+    icon: "fa-solid fa-screwdriver-wrench", // TODO need to find the icon for controller
+    languages: [
+      "./assets/svg/html5-original-wordmark.svg", // TODO need to find the svg for a GDScript / Python
+    ],
+  },
 ];
 
 app.portfolioDescriptions = {
