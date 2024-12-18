@@ -100,7 +100,7 @@ app.portfolio = [
       img: "./assets/battle_rockets_new.png",
       alt: "A javascript based game app",
     },
-    tag: ["api", "crud"],
+    tag: ["api", "crud", "feature"],
     icon: "fa-solid fa-screwdriver-wrench",
     languages: [
       "./assets/svg/html5-original-wordmark.svg",
