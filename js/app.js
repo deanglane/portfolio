@@ -110,12 +110,12 @@ app.portfolio = [
     ],
   },
   {
-    name: "Test Game",
-    url: "#", // Todo link to game in browser
-    repo: "#", // Todo link to github repo
-    desc: "A description of the game",
+    name: "Stellar Harvest",
+    url: "../pages/stellar-harvest-web/stellar-harvest.html", // Todo link to game in browser
+    repo: "https://github.com/deanglane/stellar-harvest", // Todo link to github repo
+    desc: "A Space themed game collecting falling meteorites before they crash into Earth",
     images: {
-      img: "./assets/battle_rockets_new.png",
+      img: "../assets/stellar-harvest-thumbnail.png",
       alt: "A Godot based game app",
     },
     tag: ["app", "game"],
